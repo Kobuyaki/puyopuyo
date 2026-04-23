@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ぷよぷよ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>ぷよぷよ</h1>
+    <div id="container"></div>
+
+    <script>
+      const container = document.getElementById('container');
+    
+      // 100回ループしてdivを作成
+      for (let i = 0; i < 72; i++) 
+      {
+        const box = document.createElement('div');
+        box.classList.add('box'); // CSS用のクラスを追加
+        container.appendChild(box);
+      }
+    </script>
+    <div id="next"></div>
+
+    <script>
+      const next = document.getElementById('next');
+    
+      // 100回ループしてdivを作成
+      for (let i = 0; i < 4; i++) 
+      {
+        const box2 = document.createElement('div');
+        box2.classList.add('nextBox'); // CSS用のクラスを追加
+        next.appendChild(box2);
+      }
+    </script>
+    <div id="left"><p>↓〇↑</p></div>
+    <div id="drop"><p>↓</p></div>
+    <div id="right"><p>↑〇↓</p></div>
+    <p id = "score">0</p>
+</body>
+</html>
